@@ -4,22 +4,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <f:view>
     <h:head>
         <title>Tabulated Function</title>
     </h:head>
     <h:body>
-        <h:dataTable value="#{taskBean.task2.points}" var="p">
-            <h:column>
-                <f:facet name="header">x</f:facet>
+        <p:dataTable value="#{taskBean.task2.points}" var="p" stripedRows="true">
+            <p:column headerText="x">
                 #{p.x()}
-            </h:column>
-            <h:column>
-                <f:facet name="header">y</f:facet>
+            </p:column>
+            <p:column headerText="y">
                 #{p.y()}
-            </h:column>
-        </h:dataTable>
+            </p:column>
+        </p:dataTable>
     </h:body>
 </f:view>
 </html>
